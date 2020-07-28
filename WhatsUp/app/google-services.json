@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "853453362997",
+    "firebase_url": "https://chatapp-8ce03.firebaseio.com",
+    "project_id": "chatapp-8ce03",
+    "storage_bucket": "chatapp-8ce03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853453362997:android:f954d79d593a14fbc19e7c",
+        "android_client_info": {
+          "package_name": "com.example.whatsup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853453362997-q1j8g944o3l9s5ftshuug66oksv2kav1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhmRZxwhruToGk--bD4_q4EjV-0rQWy3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853453362997-q1j8g944o3l9s5ftshuug66oksv2kav1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
