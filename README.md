@@ -3,8 +3,8 @@
 
 # Integrantes
 
-* Aarón Cruz
-* Estefanía Aguilar
+* Aarón Cruz.- Encargado de realizar las acividades de mensajería y diseño de la App.
+* Estefanía Aguilar.- Encargada de realizar el registro, autenticación y validación de los usuarios, tambien de los colores de la App.
 
 # Introducción
 
