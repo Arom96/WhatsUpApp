@@ -13,8 +13,8 @@ El presente proyecto simula una aplicación de chat interactivo entre dos o mas 
 # Funcionalidades.
 
 + La aplicación inicia en una pantalla con dos botones los cuales realizan las siguientes funciones:
-* Botón para el Inicio de Sesión.- Valida que el usuario este registrado.
-* Botón para Registrarse.- Registra usuarios que no tengan una cuenta.
+  - Botón para el Inicio de Sesión.- Valida que el usuario este registrado.
+  - Botón para Registrarse.- Registra usuarios que no tengan una cuenta.
 + Una pantalla de Inicio de Sesión que valida la autenticación de usuarios.
 + Una pantalla de registro que valida todos los campos y la contraseña que tenga una longitud de mínimo 6 caracteres.
 + La pantalla principal de la sala de Chat que estará dividida en dos secciones CHAT y AMIGOS y un botón para cerrar sesión en la parte superior derecha.
