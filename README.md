@@ -16,7 +16,7 @@ La aplicación inicia en una pantalla con dos botones los cuales realizan las si
 * Botón para el Inicio de Sesión.- Valida que el usuario este registrado.
 * Botón para Registrarse.- Registra usuarios que no tengan una cuenta.
 Una pantalla de Inicio de Sesión que valida la autenticación de usuarios.
-/n Una pantalla de registro que valida todos los campos y la contraseña que tenga una longitud de mínimo 6 caracteres.
+\n Una pantalla de registro que valida todos los campos y la contraseña que tenga una longitud de mínimo 6 caracteres.
 
 # API utilizada.
 
