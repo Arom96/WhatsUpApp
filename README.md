@@ -69,3 +69,4 @@ Para poder enviar imágenes de nuestra galeria debemos asignar dos atributos en 
 KOD Dev
 - https://www.buymeacoffee.com/koddev
 - https://www.youtube.com/watch?v=fJWFeW09qeE&list=PLzLFqCABnRQftQQETzoVMuteXzNiXmnj8&index=1
+- https://codelabs.developers.google.com/codelabs/firebase-android/#0
