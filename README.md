@@ -67,5 +67,5 @@ Para poder enviar imágenes de nuestra galeria debemos asignar dos atributos en 
 # Fuente de referencia.
 
 KOD Dev
-https://www.buymeacoffee.com/koddev
-https://www.youtube.com/watch?v=fJWFeW09qeE&list=PLzLFqCABnRQftQQETzoVMuteXzNiXmnj8&index=1
+- https://www.buymeacoffee.com/koddev
+- https://www.youtube.com/watch?v=fJWFeW09qeE&list=PLzLFqCABnRQftQQETzoVMuteXzNiXmnj8&index=1
