@@ -1,7 +1,6 @@
 package com.example.whatsup.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.whatsup.MessageActivity;
 import com.example.whatsup.R;
 import com.example.whatsup.model.Chat;
-import com.example.whatsup.model.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -27,29 +23,29 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     public static final int MSG_TYPE_LEFT = 0;
     public static final int MSG_TYPE_RIGHT = 1;
 
-    private Context nContext;
+    private Context mContext;
     private List<Chat> mChat;
     private String imageurl;
+    private String photoUrl;
 
     FirebaseUser fuser;
 
-    public MessageAdapter(Context nContext, List<Chat> mChat, String imageurl){
+    public MessageAdapter(Context mContext, List<Chat> mChat, String imageurl){
         this.mChat = mChat;
-        this.nContext = nContext;
+        this.mContext = mContext;
         this.imageurl = imageurl;
     }
 
     @NonNull
     @Override
-    public MessageAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == MSG_TYPE_RIGHT){
-            View view = LayoutInflater.from(nContext).inflate(R.layout.chat_item_right, parent, false);
+            View view = LayoutInflater.from(mContext).inflate(R.layout.chat_item_right, parent, false);
             return new MessageAdapter.ViewHolder(view);
         }else{
-            View view = LayoutInflater.from(nContext).inflate(R.layout.chat_item_left, parent, false);
+            View view = LayoutInflater.from(mContext).inflate(R.layout.chat_item_left, parent, false);
             return new MessageAdapter.ViewHolder(view);
         }
-
     }
 
     @Override
@@ -61,8 +57,19 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
         if (imageurl.equals("default")){
             holder.profile_image.setImageResource(R.mipmap.ic_perfil);
+
         }else {
-            Glide.with(nContext).load(imageurl).into(holder.profile_image);
+            Glide.with(mContext).load(imageurl).into(holder.profile_image);
+        }
+
+        if (position == mChat.size()-1){
+            if (chat.isIsseen()){
+                holder.txt_seen.setText("Leído");
+            } else {
+                holder.txt_seen.setText("Enviado");
+            }
+        } else {
+            holder.txt_seen.setVisibility(View.GONE);
         }
     }
 
@@ -75,12 +82,16 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
         public TextView show_message;
         public ImageView profile_image;
+        private TextView txt_seen;
+        public ImageView addMessageImageView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             show_message = itemView.findViewById(R.id.show_message);
             profile_image = itemView.findViewById(R.id.profile_image);
+            txt_seen = itemView.findViewById(R.id.txt_seen);
+            addMessageImageView = itemView.findViewById(R.id.addMessageImageView);
         }
     }
 

@@ -60,15 +60,17 @@ public class UsersFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 mUsers.clear();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user = snapshot.getValue(User.class);
 
-                    if (!user.getId().equals(firebaseUser.getUid())){
+                    assert user != null;
+                    assert firebaseUser != null;
+                    if (!user.getId().equals(firebaseUser.getUid())) {
                         mUsers.add(user);
                     }
                 }
 
-                userAdapter = new UserAdapter(getContext(), mUsers);
+                userAdapter = new UserAdapter(getContext(), mUsers, true);
                 recyclerView.setAdapter(userAdapter);
             }
 
